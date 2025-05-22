@@ -99,12 +99,12 @@ async function handleFormSubmit(event) {
 }
 
 async function listiraamatud() {
-	const responseData = await getDataAsJson("http://127.0.0.1:5001/raamatud/");
+	const responseData = await getDataAsJson("https://praktikum12-backend-latest-aqejdafhgzbygkhc.northeurope-01.azurewebsites.net/raamatud/");
     const resultElement = document.getElementById("raamatud_result");
     resultElement.innerHTML = ""
     for (var raamat of responseData.raamatud){
-        resultElement.innerHTML += '<a href="http://127.0.0.1:5001/raamatud/'+raamat+'"  download="'+raamat+'.txt" >' +raamat+".txt</a> " +
-                '<a href="#" onclick="deleteObject(\'http://127.0.0.1:5001/raamatud/'+raamat+'\')" > [kustuta]</a>' +
+        resultElement.innerHTML += '<a href="https://praktikum12-backend-latest-aqejdafhgzbygkhc.northeurope-01.azurewebsites.net/raamatud/'+raamat+'"  download="'+raamat+'.txt" >' +raamat+".txt</a> " +
+                '<a href="#" onclick="deleteObject(\'https://praktikum12-backend-latest-aqejdafhgzbygkhc.northeurope-01.azurewebsites.net/raamatud/'+raamat+'\')" > [kustuta]</a>' +
                 "<br />";
     }
 	
